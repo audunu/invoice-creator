@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+header h1, header p {
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    height: 20vh;
+    background-color: #3A69D2;
+}
+
+section {
+    background-color: #1F2937;
+    height: 80vh;
+    color: white;
+}
+
+.buttons > button {
+    height: 40px;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tasktotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.notestotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    padding-bottom: 0px;
+}
+
+.we-accept-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    padding-top: 0px;
+    margin-top: -10px;
+
+}
+
+.we-accept {
+    visibility: hidden;
+}
+
+.send-invoice-btn {
+    border-radius: 10px;
+    width: 87%;
+    margin: 25px;
+    height: 40px;
+    border: none;
+    background-color:#3A69D2;
+    color: white;
+}
+
+.item-container {
+    display: flex;
+}
+
+.item-name {
+    margin-left: 25px;
+    font-size: 1.3rem;
+}
+
+.item-remove {
+    margin-right: auto;
+    margin-left: 15px;
+    margin-top: 8px;
+    font-size: 0.7rem;
+    color: grey;
+}
+
+.item-price {
+    margin-right: 25px;
+    font-size: 1.3rem;
+}
+
+.line {
+    height: 0px;
+    border: 1px solid grey;
+    width: 87%;
+    margin-left: 25px;
+    margin-bottom: -25px;
+}
+
+.total-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
