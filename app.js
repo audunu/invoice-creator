@@ -26,6 +26,7 @@ const totalAmount = document.querySelector('.total-amount')
 const weAccept = document.querySelector('.we-accept')
 
 function calculateTotal() {
+    totalSum = 0;
     for (i = 0; i < serviceArray.length; i++) {
         totalSum += parseInt(serviceArray[i].price)
     }
@@ -46,6 +47,20 @@ function renderItems() {
         `
     }
     outputContainerElement.innerHTML = output
+    const removeButtons = document.querySelectorAll('.item-remove')
+    removeButtons.forEach(button => button.addEventListener('click', e => {
+        for (i = 0; i < serviceArray.length; i++) {
+            if (serviceArray[i].service === e.target.parentElement.childNodes[0].nextSibling.textContent) {
+                serviceArray.splice(i, 1)
+            }
+        }
+        calculateTotal()
+        renderItems()
+        renderTotal()
+
+
+    }))
+
 }
 
 function renderTotal() {
